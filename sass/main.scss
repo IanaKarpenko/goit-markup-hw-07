@@ -1,0 +1,23 @@
+//util styles
+
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+//base elements
+
+@import "./base/common";
+@import "./base/container";
+
+//components
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/footer-form";
+@import "./components/modal-form";
+
+//layouts
+@import "./layouts/hero";
+@import "./layouts/advantages";
+@import "./layouts/services";
+@import "./layouts/teams";
+@import "./layouts/customers";

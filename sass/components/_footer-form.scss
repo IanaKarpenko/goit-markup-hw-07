@@ -1,0 +1,46 @@
+.footer-form {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer-form-btn {
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--button-text-accent);
+  background-color: var(--accent-color);
+  height: 50px;
+  min-width: 200px;
+  border-radius: 4px;
+  border-width: 0;
+  padding: 10px 32px;
+  margin-left: 12px;
+}
+
+.footer-button-svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--footer-geo-xt-color);
+  margin-left: 10px;
+}
+
+.footer-form-input {
+  min-width: 358px;
+  background-color: transparent;
+  border: 1px solid var(--foter-input-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--footer-form-input-color);
+}

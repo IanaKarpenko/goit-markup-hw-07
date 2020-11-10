@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+.logo-light {
+  color: var(--logo-light-color);
+}
+
+.logo-dark {
+  color: var(--logo-dark-color);
+}

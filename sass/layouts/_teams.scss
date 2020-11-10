@@ -1,0 +1,102 @@
+.team-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--h2-text-color);
+}
+
+.team-list-header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--h3-text-color);
+  margin-bottom: 10px;
+}
+
+.team-list-profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--descriptions-text);
+}
+
+.team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--advantages-background-color);
+}
+
+.team-list {
+  margin-top: 50px;
+  display: flex;
+}
+
+.team-list-element:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list-element {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--hero-header-color);
+}
+
+.team-card-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social-link-element {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link-element:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-links-general-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:focus .social-link-svg,
+.social-link:hover .social-link-svg {
+  fill: var(--social-links-accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:focus,
+.social-link:hover {
+  background-color: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

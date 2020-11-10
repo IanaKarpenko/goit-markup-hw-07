@@ -1,0 +1,17 @@
+//util styles
+
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+//base elements
+
+@import "./base/common";
+@import "./base/container";
+
+//components
+
+@import "./components/header";
+@import "./components/footer";
+
+//layouts
+@import "./layouts/projects";

@@ -4,7 +4,7 @@
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--h3-text-color);
+  color: $h3-text-color;
 }
 
 .advantages-list-description {
@@ -12,7 +12,7 @@
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--descriptions-text);
+  color: $descriptions-text;
   margin-top: 10px;
 }
 
@@ -40,7 +40,7 @@
   content: "";
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--advantages-background-color);
+  background-color: $advantages-background-color;
   border-radius: 4px;
   margin-bottom: 30px;
 }

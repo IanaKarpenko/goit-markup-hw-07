@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--back-drop-back-color);
+  background-color: $back-drop-back-color;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -27,7 +27,7 @@
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
-  background-color: var(--modal-back-color);
+  background-color: $modal-back-color;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   padding: 40px;
 }
@@ -42,8 +42,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid var(--close-button-border-color);
-  background-color: var(--modal-back-color);
+  border: 1px solid $close-button-border-color;
+  background-color: $modal-back-color;
 }
 
 .modal-close-svg {
@@ -79,7 +79,7 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--modal-form-policy-label-bclr);
+  color: $modal-form-policy-label-bclr;
 }
 
 .modal-form-input {
@@ -87,7 +87,7 @@
   height: 40px;
   border-radius: 4px;
   padding-left: 42px;
-  border: 1px solid var(--modal-form-message-bcl);
+  border: 1px solid $modal-form-message-bcl;
   outline-style: none;
 }
 
@@ -99,17 +99,17 @@
 }
 
 .modal-labels-text {
-  font-weight: normal;
+  font-weight: $base-font-weight;
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
-  color: var(--modal-texts-color);
+  color: $modal-texts-color;
 }
 
 .modal-form-message {
   margin-top: 4px;
   height: 120px;
-  border: 1px solid var(--modal-form-message-bcl);
+  border: 1px solid $modal-form-message-bcl;
   border-radius: 4px;
   resize: none;
   padding-top: 12px;
@@ -120,19 +120,8 @@
   font-size: 14px;
   line-height: 1.143px;
   letter-spacing: 0.01em;
-  color: var(--modal-form-message-color);
+  color: $modal-form-message-color;
   outline-style: none;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
 }
 
 .modal-form-policy-label::before {
@@ -141,7 +130,7 @@
   width: 16px;
   height: 15px;
   border-radius: 4px;
-  border: 2px solid var(--modal-form-policy-label-bclr);
+  border: 2px solid $modal-form-policy-label-bclr;
 }
 
 .modal-checkbox-text {
@@ -149,17 +138,17 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: var(--modal-texts-color);
+  color: $modal-texts-color;
 }
 
 .modal-form-policy-label a {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+  font-family: $base-font-family;
+  font-style: $base-font-style;
+  font-weight: $base-font-weight;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-btn {
@@ -168,8 +157,8 @@
 }
 
 .modal-form-btn {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: $base-font-family;
+  font-style: $base-font-style;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -178,8 +167,8 @@
   justify-content: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--button-text-accent);
-  background: var(--accent-color);
+  color: $button-text-accent;
+  background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   height: 50px;
@@ -196,8 +185,8 @@
 .hero-button:focus,
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-  color: var(--button-text-accent);
-  background-color: var(--modal-button-accent-color);
+  color: $button-text-accent;
+  background-color: $modal-button-accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -206,21 +195,21 @@
 
 .modal-form-policy:checked + .modal-form-policy-label::before {
   background-image: url("../images/check.svg");
-  border: 2px solid var(--accent-color);
-  background-color: var(--accent-color);
+  border: 2px solid $accent-color;
+  background-color: $accent-color;
 }
 
 .modal-form-input:focus,
 .modal-form-message:focus {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
 }
 
 .modal-form-input:focus + .modal-form-svg-icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .close-button:focus,
 .close-button:hover {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }

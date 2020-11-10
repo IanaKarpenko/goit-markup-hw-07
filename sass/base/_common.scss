@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: $base-font-family;
+  font-style: $base-font-style;
 }
 
 .link {
@@ -19,7 +19,7 @@ body {
 }
 
 .address {
-  font-style: normal;
+  font-style: $base-font-style;
 }
 
 img {
@@ -27,9 +27,9 @@ img {
 }
 
 .logo-light {
-  color: var(--logo-light-color);
+  color: $logo-light-color;
 }
 
 .logo-dark {
-  color: var(--logo-dark-color);
+  color: $logo-dark-color;
 }

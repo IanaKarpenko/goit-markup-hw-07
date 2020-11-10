@@ -1,15 +1,15 @@
 .project-button {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: $base-font-family;
+  font-style: $base-font-style;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--button-text-color);
+  color: $button-text-color;
   border-radius: 4px;
   border-width: 0;
-  background-color: var(--button-color);
+  background-color: $button-color;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 22px;
@@ -21,8 +21,8 @@
 
 .project-button:hover,
 .project-button:focus {
-  color: var(--button-text-accent);
-  background-color: var(--accent-color);
+  color: $button-text-accent;
+  background-color: $accent-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
@@ -64,7 +64,7 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--h2-text-color);
+  color: $h2-text-color;
 }
 
 .projects-list-description {
@@ -72,7 +72,7 @@
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: var(--descriptions-text);
+  color: $descriptions-text;
 }
 
 .projects-section {
@@ -85,9 +85,9 @@
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-  border-left: 1px solid var(--projects-border-color);
-  border-right: 1px solid var(--projects-border-color);
-  border-bottom: 1px solid var(--projects-border-color);
+  border-left: 1px solid $projects-border-color;
+  border-right: 1px solid $projects-border-color;
+  border-bottom: 1px solid $projects-border-color;
 }
 
 .projects-list-description {
@@ -111,7 +111,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--project-element-overlay-color);
+  background-color: $project-element-overlay-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,11 +130,11 @@
 }
 
 .project-overlay-text {
-  font-weight: normal;
+  font-weight: $base-font-weight;
   font-size: 18px;
   line-height: 1.556;
   letter-spacing: 0.03em;
-  color: var(--services-label-color);
+  color: $services-label-color;
   padding-left: 24px;
   padding-right: 24px;
 }

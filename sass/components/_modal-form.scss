@@ -6,18 +6,13 @@
   height: 100%;
   background-color: $back-drop-back-color;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.back-drop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
-}
-
-.back-drop.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(0);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+  }
 }
 
 .modal-window {
@@ -30,6 +25,11 @@
   background-color: $modal-back-color;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   padding: 40px;
+
+  .back-drop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
 }
 
 .close-button {
@@ -44,6 +44,11 @@
   border-radius: 50%;
   border: 1px solid $close-button-border-color;
   background-color: $modal-back-color;
+
+  &:focus,
+  &:hover {
+    fill: $accent-color;
+  }
 }
 
 .modal-close-svg {
@@ -54,22 +59,132 @@
 .modal-form {
   display: flex;
   flex-direction: column;
-}
 
-.modal-form-field {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+  &-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  &-field-wrapper {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+  }
+
+  &-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 42px;
+    border: 1px solid $modal-form-message-bcl;
+    outline-style: none;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &-svg-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    .modal-form-input:focus + & {
+      fill: $accent-color;
+    }
+  }
+
+  &-message {
+    margin-top: 4px;
+    height: 120px;
+    border: 1px solid $modal-form-message-bcl;
+    border-radius: 4px;
+    resize: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.143px;
+    letter-spacing: 0.01em;
+    color: $modal-form-message-color;
+    outline-style: none;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &-policy-label {
+    font-family: $base-font-family;
+    font-style: $base-font-style;
+    font-weight: $base-font-weight;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $accent-color;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 15px;
+      border-radius: 4px;
+      border: 2px solid $modal-form-policy-label-bclr;
+    }
+
+    .modal-form-policy:checked + &::before {
+      background-image: url("../images/check.svg");
+      border: 2px solid $accent-color;
+      background-color: $accent-color;
+    }
+  }
+
+  &-btn {
+    align-self: center;
+    margin-top: 30px;
+    font-family: $base-font-family;
+    font-style: $base-font-style;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $button-text-accent;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    height: 50px;
+    min-width: 200px;
+    border-radius: 4px;
+    border-width: 0;
+    padding: 10px 32px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $button-text-accent;
+      background-color: $modal-button-accent-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
 }
 
 .textarea {
   margin-bottom: 20px;
-}
-
-.modal-form-field-wrapper {
-  display: block;
-  position: relative;
-  margin-top: 4px;
 }
 
 .modal-header {
@@ -82,22 +197,6 @@
   color: $modal-form-policy-label-bclr;
 }
 
-.modal-form-input {
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  padding-left: 42px;
-  border: 1px solid $modal-form-message-bcl;
-  outline-style: none;
-}
-
-.modal-form-svg-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-}
-
 .modal-labels-text {
   font-weight: $base-font-weight;
   font-size: 12px;
@@ -106,110 +205,10 @@
   color: $modal-texts-color;
 }
 
-.modal-form-message {
-  margin-top: 4px;
-  height: 120px;
-  border: 1px solid $modal-form-message-bcl;
-  border-radius: 4px;
-  resize: none;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-right: 16px;
-  padding-left: 16px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.143px;
-  letter-spacing: 0.01em;
-  color: $modal-form-message-color;
-  outline-style: none;
-}
-
-.modal-form-policy-label::before {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  border-radius: 4px;
-  border: 2px solid $modal-form-policy-label-bclr;
-}
-
 .modal-checkbox-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: $modal-texts-color;
-}
-
-.modal-form-policy-label a {
-  font-family: $base-font-family;
-  font-style: $base-font-style;
-  font-weight: $base-font-weight;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: $accent-color;
-}
-
-.modal-form-btn {
-  align-self: center;
-  margin-top: 30px;
-}
-
-.modal-form-btn {
-  font-family: $base-font-family;
-  font-style: $base-font-style;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: $button-text-accent;
-  background: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  height: 50px;
-  min-width: 200px;
-  border-radius: 4px;
-  border-width: 0;
-  padding: 10px 32px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-button:hover,
-.hero-button:focus,
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-  color: $button-text-accent;
-  background-color: $modal-button-accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form-policy:checked + .modal-form-policy-label::before {
-  background-image: url("../images/check.svg");
-  border: 2px solid $accent-color;
-  background-color: $accent-color;
-}
-
-.modal-form-input:focus,
-.modal-form-message:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-}
-
-.modal-form-input:focus + .modal-form-svg-icon {
-  fill: $accent-color;
-}
-
-.close-button:focus,
-.close-button:hover {
-  fill: $accent-color;
 }

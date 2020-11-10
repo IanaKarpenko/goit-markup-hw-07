@@ -1,51 +1,53 @@
-.team-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $h2-text-color;
-}
+.team {
+  &-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $advantages-background-color;
+  }
 
-.team-list-header {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.188;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $h3-text-color;
-  margin-bottom: 10px;
-}
-
-.team-list-profession {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.188;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $descriptions-text;
-}
-
-.team-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: $advantages-background-color;
+  &-header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $h2-text-color;
+  }
 }
 
 .team-list {
   margin-top: 50px;
   display: flex;
-}
 
-.team-list-element:not(:last-child) {
-  margin-right: 30px;
-}
+  &-element {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $hero-header-color;
 
-.team-list-element {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background-color: $hero-header-color;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $h3-text-color;
+    margin-bottom: 10px;
+  }
+
+  &-profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $descriptions-text;
+  }
 }
 
 .team-card-info {
@@ -66,6 +68,10 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .social-link {
@@ -76,27 +82,23 @@
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.social-link-element:not(:last-child) {
-  margin-right: 10px;
-}
+  &-svg {
+    width: 20px;
+    height: 20px;
+    fill: $social-links-general-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.social-link-svg {
-  width: 20px;
-  height: 20px;
-  fill: $social-links-general-color;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .social-link:focus &,
+    .social-link:hover & {
+      fill: $social-links-accent-color;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
 
-.social-link:focus .social-link-svg,
-.social-link:hover .social-link-svg {
-  fill: $social-links-accent-color;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-link:focus,
-.social-link:hover {
-  background-color: $accent-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $accent-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }

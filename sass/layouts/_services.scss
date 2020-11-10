@@ -12,25 +12,19 @@
   color: $h2-text-color;
 }
 
-/*.services-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 94px;
-}*/
-
 .services-list {
   display: flex;
   margin-top: 50px;
-}
 
-.services-list-element:not(:last-child) {
-  margin-right: 30px;
-}
+  &-element {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
 
-.services-list-element {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .services-label {
@@ -41,16 +35,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.service-label-text {
-  font-family: $base-font-family;
-  font-style: $base-font-style;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.143;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $services-label-color;
+  &-text {
+    font-family: $base-font-family;
+    font-style: $base-font-style;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.143;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $services-label-color;
+  }
 }

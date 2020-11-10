@@ -1,62 +1,61 @@
-.advantages-list-header {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $h3-text-color;
-}
-
-.advantages-list-description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: $descriptions-text;
-  margin-top: 10px;
-}
-
 .advantages-section {
   padding-top: 94px;
 }
 
 .advantages-list {
   display: flex;
-  /*padding-top: 94px;*/
-}
 
-.advantages-list-element:not(:last-child) {
-  margin-right: 30px;
-}
+  &-header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $h3-text-color;
+  }
 
-.advantages-list-element {
-  min-width: 270px;
-  min-height: 100px;
-}
+  &-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: $descriptions-text;
+    margin-top: 10px;
+  }
 
-.advantages-list-element::before {
-  display: flex;
-  height: 120px;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $advantages-background-color;
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
+  &-element {
+    min-width: 270px;
+    min-height: 100px;
 
-.advantages-list-element:nth-child(1)::before {
-  background-image: url(../images/antenne.svg);
-}
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
 
-.advantages-list-element:nth-child(2)::before {
-  background-image: url(../images/clock.svg);
-}
+    &::before {
+      display: flex;
+      height: 120px;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $advantages-background-color;
+      border-radius: 4px;
+      margin-bottom: 30px;
+    }
 
-.advantages-list-element:nth-child(3)::before {
-  background-image: url(../images/diagram.svg);
-}
+    &:nth-child(1)::before {
+      background-image: url(../images/antenne.svg);
+    }
 
-.advantages-list-element:nth-child(4)::before {
-  background-image: url(../images/cosmonaut.svg);
+    &:nth-child(2)::before {
+      background-image: url(../images/clock.svg);
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(../images/diagram.svg);
+    }
+
+    &:nth-child(4)::before {
+      background-image: url(../images/cosmonaut.svg);
+    }
+  }
 }

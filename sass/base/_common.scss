@@ -26,10 +26,12 @@ img {
   display: block;
 }
 
-.logo-light {
-  color: $logo-light-color;
-}
+.logo {
+  &-light {
+    color: $logo-light-color;
+  }
 
-.logo-dark {
-  color: $logo-dark-color;
+  &-dark {
+    color: $logo-dark-color;
+  }
 }
